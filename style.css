@@ -1,0 +1,368 @@
+/* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /* 
+  ------------------------------------------------
+  To nahoře je černá magie, na to raději nešahej.
+  Ale sem dolů už si můžeš psát, co budeš chtít.
+
+  Barva závoje:	#faf9e1
+  Barva květák hlava: #f2efac
+  Barva květák tělo: #a4bf41
+  Barva brokolice hlava: #678d2d
+  Barva brokolice tělo: #99c323
+  Barva hnědá text: #6d3b2b
+  Barva papír oznámení: 
+  Barva srdce světlé: #d9667b
+  Barva srdce tmavé: #8c1728
+  pozadi: #FFFFF9
+
+  písmo je Life Savers v řezu Extra Bold
+
+  ------------------------------------------------
+  */
+  
+/* --------------------- body a nadpisy -------------------------------*/
+
+  body{
+    color:#6d3b2b;
+    font-family: 'Life Savers', cursive;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .dalsistrana {
+    padding-bottom: 30px;
+  }
+
+  h1,
+  h2 {
+    font-family: 'Life Savers', cursive;
+    text-align: center;
+    margin-top: 0;
+    font-weight: 700;
+    color: #d9667b;
+    padding: 10px;
+  }  
+  
+  h1 {
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-size: 48px;
+  }
+  
+  .cervene {
+    color: #d9667b;
+  }
+
+  .logo {
+    width:50%;
+  }
+/* -------------------------- sekce ------------------------------- */  
+
+section {
+  padding: 25px 10%;
+  overflow: auto;
+}
+
+.s0 {
+  text-align: center;
+}
+
+.s0,
+.s1,
+.s4 {
+  background-color: #FFFFF9;
+}
+
+.s2, .s5, .fotografie {
+  background-image: linear-gradient(#FFFFF9, #faf9e1);
+}
+
+.s3, .s6, .podekovani {
+  background-color: #faf9e1;
+}
+
+/* -------------------------- sekce úvod ------------------------------- */  
+
+.s1 {
+  text-align: center;
+}
+
+/* -------------------------- sekce harmonogram ------------------------------- */  
+
+table {
+  border-collapse: collapse;
+  width: 80%; 
+  margin-left:25%; 
+  margin-right:25%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.levy {
+  text-align: right;
+}
+
+.pravy {
+  text-align: left;
+}
+
+/* -------------------------- sekce místo ------------------------------- */  
+
+
+/* -------------------------- sekce ostatní info ------------------------------- */  
+
+.i {
+  padding-bottom: 5px;
+  box-shadow: 0 1px 1px -1px #6d3b2b;
+}
+
+.celaSekce {
+  text-align: center;
+}
+
+.ikonka {
+  flex-shrink: 0;
+  margin: 2%;
+  width: 80px;
+  padding-top: 5%;
+
+}
+
+.img-koureni, .img-mazlicci, .img-telefon, .img-dary, .img-stan, .img-dresscode {
+  width: 58px;
+}
+
+.img-tradice, .img-stan {
+  margin: 0;
+}
+
+.vyjmenovane {
+  font-size: 18px;
+  text-align: left;;
+}
+
+/* -------------------------- covid ------------------------------- */  
+.s5 {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  color: #d9667b;
+  font-weight: thin;
+  display: inline-block; 
+  width: 1.5em;
+  margin-left: -1em;
+}
+
+.teseni {
+  font-weight: 700;
+}
+
+
+/* -------------------------- footer ------------------------------- */  
+footer {
+  text-align:center;
+  background-color:#FFFFF9;
+  padding: 15px 15%;
+  overflow: auto;
+  font-size: 18px;
+}
+
+/* -------------------------- jsme Kostalovi ------------------------------- */  
+ 
+header {
+  background-image: url("obrazky/uvodnimobil.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 200px 0;
+}
+
+
+.ztracene {
+  height: 400px;
+  width: auto;
+}
+
+ol {
+  list-style-type: decimal;
+  content: none;
+}
+
+li {
+  padding: 8px;
+}
+
+h3 {
+  font-size: 25px;
+  color: #d9667b;
+}
+
+.pozdrav {
+  text-align: right;
+}
+
+
+
+/* POČÍTAČ -------------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width:900px) {
+
+  /*-------------------UVOD---------------------- */
+  .uvod {
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  .logo_uvod {
+    width:45%;
+  }
+
+  h1 {
+    text-align: left;
+  }
+  .otazka_uvod {
+    text-align: left;
+    width: 55%;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  body {
+    font-size: 23px;
+    text-align: left;
+  }
+
+  .s1 {
+    text-align: center;
+  }
+
+  .vyjmenovane {
+    font-size: 21px;
+    text-align: left;;
+  }
+
+  /*------------------místo------------------*/
+  .misto, 
+  .celeztraty {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+
+  .kdePopis,
+  .mapa,
+  .ztratypopis,
+  .ztratyfoto
+   {
+    width: 50%;
+    padding: 5%;
+  }
+
+  /* ----------------ostatní informace -------------------*/
+  .i1, .i2, .i3, .i4, .i5, .i6, .i7 {
+    display:flex;
+    position: relative;
+    align-items: center;
+    box-shadow: 0 1px 1px -1px #6d3b2b;
+  }  
+
+  .i7 {
+    box-shadow: none;
+  }
+  
+  .di {
+    width:10%;
+    padding:1%;
+    flex-shrink: 0;
+  }
+  
+  .dp {
+    width:90%;
+    padding: 1%; 
+    text-align: left;
+  }
+    
+}
+
+  .kontakty {
+    text-align: center;
+  }
+
+
+  header {
+    background-image: url("obrazky/uvodniPC.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 400px 0;
+  }  
+
+
+
+/* -------------------------- odkazy ------------------------------- */  
+
+  a {
+    color: #d9667b;
+    box-shadow: 0 2px 2px -2px #d9667b;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color:#d9667b;
+    color:#FFFFF9;
+  }
+
+  .dalsistrana a {
+    background-color: #d9667b;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .dalsistrana a:hover {
+    background-color: #d85a71;
+  }
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
